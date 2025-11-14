@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lähiliikenteen Asemahaku – Digitraffic</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Lähiliikenteen Live Aikataulut</h1>
+        <p>Digitraffic API - reaaliaikaiset junatiedot</p>
+    </header>
+
+    <section class="controls">
+        <label for="stationSearch">Etsi asemaa:</label>
+        <input type="text" id="stationSearch" placeholder="Esim. Helsinki">
+
+        <label for="stationSelect">Valitse asema:</label>
+        <select id="stationSelect"></select>
+
+        <button id="fetchTrains">Hae aseman tiedot</button>
+    </section>
+
+    <section id="status"></section>
+
+    <section id="trainsList" class="trains"></section>
+
+    <script src="script.js"></script>
+</body>
+</html>
