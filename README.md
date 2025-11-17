@@ -3,11 +3,11 @@ Projekti 2: AJAX-sovellus REST APIa hyödyntäen
 Tekijä: Miku Honkanen 
 
 ## Verkkolinkit:
-Pääset julkaistuun sovellukseen käsiksi osoitteessa [google.com](https://google.com)
+Pääset julkaistuun sovellukseen käsiksi osoitteessa https://commuter-traffic-app.netlify.app
 Linkki projektin videoesittelyyn [google.com](https://google.com)
 
 ## Työn jakautuminen 
-Miten työmäärä jaettiin? Kuka teki mitä? Miten yhteistyö sujui?
+Suoritin projektin yksilötyönä, joten tein kaikki työvaiheet. Työskentelin projektin parissa noin viikon ajan.
 
 ## Oma arvio työstä ja oman osaamisen kehittymisestä
 Mielestäni onnistuin...
