@@ -1,7 +1,6 @@
-// -----------------------------------------------------------
-// DIGITRAFFIC – Aseman aikataulunäkymä (Vaihtoehto 2)
-// Näyttää vain valitun aseman saapuvat/lähtevät junat
-// -----------------------------------------------------------
+
+// DIGITRAFFIC – Aseman aikataulunäkymä
+// Näyttää valitun aseman saapuvat/lähtevät junat
 
 const BASE = "https://rata.digitraffic.fi/api/v1";
 
@@ -13,9 +12,8 @@ const statusEl = document.getElementById("status");
 
 let globalStations = [];
 
-// -----------------------------------------------------------
-// 1. Hae kaikki asemat
-// -----------------------------------------------------------
+
+// Hae kaikki asemat
 async function fetchStations() {
     try {
         const res = await fetch(`${BASE}/metadata/stations`);
@@ -37,9 +35,8 @@ async function fetchStations() {
     }
 }
 
-// -----------------------------------------------------------
-// 2. Hae junat asemalle (saapuvat + lähtevät)
-// -----------------------------------------------------------
+
+// Haetaan junat asemalle
 async function fetchStationTrains(stationCode) {
     trainsList.innerHTML = "";
     statusEl.textContent = "Haetaan aseman tietoja…";
@@ -67,11 +64,8 @@ async function fetchStationTrains(stationCode) {
     }
 }
 
-// -----------------------------------------------------------
-// 3. Näytä asemakohtaiset aikataulut:
-//    - Saapuvat
-//    - Lähtevät
-// -----------------------------------------------------------
+
+// 3. Näytä asemakohtaiset aikataulut: Saapuvat/Lähtevät
 function renderStationView(trains, stationCode) {
     trainsList.innerHTML = "";
 
@@ -110,9 +104,8 @@ function renderStationView(trains, stationCode) {
     trainsList.appendChild(buildTable("Lähtevät junat", departing, "depart"));
 }
 
-// -----------------------------------------------------------
-// 4. Taulukon luonti
-// -----------------------------------------------------------
+
+// Taulukon luonti
 function buildTable(title, data, mode) {
     const section = document.createElement("section");
     section.className = "schedule-block";
@@ -152,9 +145,8 @@ function buildTable(title, data, mode) {
     return section;
 }
 
-// -----------------------------------------------------------
-// 5. Apufunktiot
-// -----------------------------------------------------------
+
+// Apufunktiot
 function getStationName(code) {
     const s = globalStations.find(st => st.stationShortCode === code);
     return s ? s.stationName : code;
